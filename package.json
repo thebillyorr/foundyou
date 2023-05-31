@@ -1,6 +1,6 @@
 {
   "name": "idspy",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "npm packge to streamline simple networking and OSINT tasks",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,5 @@
     "type": "git",
     "url": "https://github.com/thebillyorr/idspy"
   },
-  "homepage": "https://thebillyorr.com/idspy"
+  "homepage": "https://www.thebillyorr.com/idspy"
 }

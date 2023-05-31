@@ -1,6 +1,6 @@
 {
   "name": "idspy",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "npm packge to streamline simple networking and OSINT tasks",
   "main": "index.js",
   "scripts": {

@@ -5,26 +5,31 @@ import { publicIp, publicIpv4, publicIpv6 } from "public-ip";
 import fetch from "node-fetch";
 import chalk from "chalk";
 
-(async function init() {
-  console.log(
-    chalk.bgRed.whiteBright.bold(
-      "\nDISCLAIMER. This tool is for educational purposes only. Use Responsibly."
-    )
-  );
 
-  if (process.argv.length < 3) {
+(async function init() {
+  if (process.argv.length < 3) { //If no arguments are passed, return host data
     output(await fetchHost());
   } else {
     let thirdArg = process.argv[2];
 
-    if (
+    if(thirdArg === "-h" || thirdArg === "--help") { //If third argument is help, return help data
+        printHelp();
+        return;
+    } 
+    
+    if(thirdArg === "-v" || thirdArg === "--version") { //If third argument is version, return version data
+        printVersion();
+        return;
+    }  
+
+    if ( //If third argument is IPv4 or IPv6, return IP data
       identifyString(thirdArg) === "IPv4" ||
       identifyString(thirdArg) === "IPv6"
     )
-      output(await fetchIP(thirdArg));
-    else if (identifyString(thirdArg) === "Domain") {
+      output(await fetchIP(thirdArg)); 
+    else if (identifyString(thirdArg) === "Domain") { //If third argument is domain, return domain data
       output(await fetchDomain(thirdArg));
-    } else if (identifyString(thirdArg) === "None of the above") {
+    } else if (identifyString(thirdArg) === "None of the above") { //If third argument is not valid, return error
       const ipDataMap = new Map([
         ["Invalid Input:", "Please enter a valid IPv4, IPv6, or TLD."],
         ["\n", ""],
@@ -137,6 +142,9 @@ async function fetchDomain(domain) {
 
       index++;
     });
+
+    let tempMap = await fetchIP(domainDataMap.get("A:")); //Fetch IP for A Record
+    domainDataMap.set("A Record Owner:", tempMap.get("Owner:")); 
   } catch (error) {
     console.error("Request failed:", error);
     throw error;
@@ -199,6 +207,25 @@ function convertUnixTime(timestamp) {
   return formattedDate;
 }
 
+function printHelp() {
+    console.log(
+        chalk.bgRed.whiteBright.bold(
+          "\nDISCLAIMER. This tool is for educational purposes only. Use Responsibly."
+        )
+      );
+    console.log("\n");
+    console.log("Usage: idspy [options] <domain>");
+    console.log("");
+    console.log("Options:");
+    console.log("  -h, --help       Output usage information");
+    //console.log("  -v, --version    Output the version number");
+    console.log("");
+    console.log("Examples:");
+    console.log("  idspy example.com");
+    console.log("  idspy 123.123.123.123");
+    console.log("");
+  }
+  
 function output(map) {
   console.log("\n");
   map.forEach((value, key) => {

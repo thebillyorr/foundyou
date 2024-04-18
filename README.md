@@ -33,7 +33,7 @@ This will output information related to the IP address, including the city, regi
 `idspy` can identify IPv4 and IPv6 addresses as well as domains. If the input is not recognized as any of these, an error message will be shown with information on the correct formats.
 
 
-## Security 🔒
+## Security :closed_lock_with_key:	
 idspy prioritizes the security and privacy of its users. While it fetches public IP data, it does not store any information. Users should ensure their Node.js environment is secure and up to date.
 
 ## Contribution 🤝

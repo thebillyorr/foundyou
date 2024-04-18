@@ -1,4 +1,4 @@
-# idspy
+# 🚀 idspy
 
 `idspy` is a simple and easy-to-use networking tool designed to simplify basic tasks. This command-line utility provides information about your current network and host, along with fetching public IP data. 
 

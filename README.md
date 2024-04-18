@@ -4,11 +4,6 @@
 
 The utility is written in Node.js and is deployable on any system supporting Node.js.
 
-## Features ✨
-- Fetch host data
-- Get public IP data
-- Recognize input as IPv4, IPv6, or Domain
-
 ## Installation 🛠️
 
 Make sure you have Node.js installed on your system. Then, install `idspy` globally using npm:

@@ -44,6 +44,6 @@ Feel free to contribute to this project by submitting issues or pull requests fo
 
 MIT License
 
-> [!CAUTION]
-> Please use this tool responsibly. Fetching public IP data is meant for legitimate use cases like debugging and troubleshooting.
+## Disclaimer :warning:
+Please use this tool responsibly. Fetching public IP data is meant for legitimate use cases like debugging and troubleshooting.
 

@@ -1,15 +1,15 @@
-# 🚀 idspy
+# idspy 🚀
 
-`idspy` is a simple and easy-to-use networking tool designed to simplify basic tasks. This command-line utility provides information about your current network and host, along with fetching public IP data. 
+`idspy` is a simple and easy-to-use networking tool designed to simplify basic tasks. This command-line utility provides information about your current network and host, along with fetching public IP data.
 
 The utility is written in Node.js and is deployable on any system supporting Node.js.
 
-## Features
+## Features ✨
 - Fetch host data
 - Get public IP data
 - Recognize input as IPv4, IPv6, or Domain
 
-## Installation
+## Installation 🛠️
 
 Make sure you have Node.js installed on your system. Then, install `idspy` globally using npm:
 
@@ -17,7 +17,7 @@ Make sure you have Node.js installed on your system. Then, install `idspy` globa
 npm install -g idspy
 ```
 
-## Usage
+## Usage 📖
 
 To fetch host data, simply run the command without any arguments:
 
@@ -37,14 +37,18 @@ This will output information related to the IP address, including the city, regi
 
 `idspy` can identify IPv4 and IPv6 addresses as well as domains. If the input is not recognized as any of these, an error message will be shown with information on the correct formats.
 
-## Contribution
+
+## Security 🔒
+idspy prioritizes the security and privacy of its users. While it fetches public IP data, it does not store any information. Users should ensure their Node.js environment is secure and up to date.
+
+## Contribution 🤝
 
 Feel free to contribute to this project by submitting issues or pull requests for bugs and features.
 
-## License
+## License 📜
 
 MIT License
 
-## Disclaimer
+## ⚠️ Disclaimer ⚠
 
 Please use this tool responsibly. Fetching public IP data is meant for legitimate use cases like debugging and troubleshooting.
